@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Looker Studio Report</title>
+    <style>
+        /* For desktop with Full HD */
+        #reportFrame {
+            width: 100%;
+            height: 100vh; /* Full screen height */
+        }
+
+        /* For smaller screens, such as Android */
+        @media only screen and (max-width: 600px) {
+            #reportFrame {
+                width: 100%;
+                height: 80vh; /* Adjust the height as needed */
+            }
+        }
+    </style>
+    <script>
+        function changeReport(page) {
+            document.getElementById("reportFrame").src = page;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>REPORT INVENTORY</h1>
+
+    <!-- Embed the report here -->
+    <iframe id="reportFrame" src="https://lookerstudio.google.com/embed/reporting/72836de3-a5c6-4aa2-abb5-cde693c1c7ad/page/p_g4kt1tjglc" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+
+</body>
+</html>
