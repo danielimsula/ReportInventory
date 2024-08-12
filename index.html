@@ -1,36 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Looker Studio Report</title>
+
+    <title>DASHBOARD INVENTORY</title>
     <style>
-        /* For desktop with Full HD */
-        #reportFrame {
-            width: 100%;
-            height: 100vh; /* Full screen height */
+    #reportFrame {
+        width: 100%;
+        height: 100vh; 
+        display: block; /* Pastikan iframe berperilaku seperti elemen block */
+        margin: 0 auto; /* Atur margin kiri dan kanan otomatis untuk menempatkan di tengah */
         }
 
-        /* For smaller screens, such as Android */
-        @media only screen and (max-width: 600px) {
-            #reportFrame {
-                width: 100%;
-                height: 80vh; /* Adjust the height as needed */
-            }
+        .heading-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            transition: transform 0.2s ease; /* Smooth transition for hover effect */
+        }
+
+        button:hover {
+            transform: scale(1.1); /* Enlarge button on hover */
+        }
+
+        button img {
+            width: 24px; 
+            height: 24px;
+            vertical-align: middle; 
+            margin-right: 5px; 
         }
     </style>
     <script>
-        function changeReport(page) {
-            document.getElementById("reportFrame").src = page;
-        }
+        // ... (JavaScript code) ...
     </script>
 </head>
 <body>
-
-    <h1>REPORT INVENTORY</h1>
-
-    <!-- Embed the report here -->
-    <iframe id="reportFrame" src="https://lookerstudio.google.com/embed/reporting/72836de3-a5c6-4aa2-abb5-cde693c1c7ad/page/p_g4kt1tjglc" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <div class="heading-container">
+<h1 style="color: rgba(183, 0, 0, 0.87); font-family:'Arial',sans-serif; font-size: 40px;">DASHBOARD INVENTORY ACTIVITY</h1>
+    </div>
+    <iframe id="reportFrame" src="https://lookerstudio.google.com/embed/reporting/72836de3-a5c6-4aa2-abb5-cde693c1c7ad/page/p_g4kt1tjglc" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 </body>
 </html>
